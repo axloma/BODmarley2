@@ -1,11 +1,6 @@
 {% extends "base.html" %}
-
-
 {% block content  %}
-
-
 <section class="login" >
-
     <fieldset class="yasser_login">
 <form action="{% url 'login_U'  %}" method="POST" >
     {% csrf_token %}
@@ -17,10 +12,10 @@
     <label for="username" >username</label>
     <input type="text" name="username" id="username" placeholder="username" autofocus>
     </p>
-    <p>
+    <p class="vp">
     <label for="pass" >password</label>
+    <input type="password" name="pass" id="pass" placeholder="password"> 
     <button  id="view"  class= "btn btn-1 " > </button>
-    <input type="password" name="pass" id="pass" placeholder="password">
     </p>
     <button type="submit" name="login" value="login"  class="btn btn-1">login</button>
     </form>
@@ -29,6 +24,11 @@
 </section>
 
 <script>
+    var page = "LOGIN";
+    $("#hs").html("") ;
+    $("#cart_n").hide();
+    $(".movie").html("");
+    $(".movie").hide();
     let view = false;
    const chang = $("#view") 
     chang.click( (e)=> {
@@ -43,10 +43,10 @@
     {
     x.attr("type","password");
     view = false;
-    
-    
+        
     }
 });
     //
+    
 </script>
 {% endblock  %}

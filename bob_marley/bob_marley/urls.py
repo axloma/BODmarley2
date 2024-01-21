@@ -1,4 +1,3 @@
-
 from django.contrib import admin
 from django.urls import path, include
 from . import settings
@@ -11,4 +10,6 @@ urlpatterns = [
     
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
 
-
+admin.site.site_header = "BODMARLEY"
+admin.site.site_title = "BODMARLEY"
+admin.site.index_title = "bod marley"
