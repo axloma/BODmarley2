@@ -3,7 +3,6 @@ from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
 from cart.cart import Cart
 
-
 def MV_HOLD(request,page,p_I="1"):
     page = page
     products = Product.objects.all()
