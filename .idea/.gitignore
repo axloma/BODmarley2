@@ -2,6 +2,6 @@
 .gitignore
 /shelf/
 /workspace.xml
-
+.idea
 virt_bob/
 venv/
